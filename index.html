@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,23 +8,26 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Incredible Meme Generator</title>
 </head>
+
 <body onload="init()">
 
     <section class="images-library">
-    <!-- <img src="" alt="memeimage">    to render from js -->
+        <!-- <img src="" alt="memeimage">    to render from js -->
     </section>
-    
-    <div class="properties"> 
-        <input type="text" id="memetext">
+
+    <div class="properties">
+        <input type="text" id="memetext" onchange="onChangedText(this.value)">
         <button class="decrease-font">-</button>
-         <button class="increase-font">+ </button>
+        <button class="increase-font">+ </button>
+        <input type="color" id="color" onchange="setColor(this.value)" />
+        <button> <a onclick="saveCanvas(this)">Save</a></button>
 
+    </div>
 
-         </div>
-
-    <canvas class="canvas" id="canvas" width="600" height="550" onmousemove="canvasClicked(event)"></canvas> 
+    <canvas class="canvas" id="canvas" width="600" height="550"></canvas>
 
     <script src="js/main.js"></script>
     <script src="js/util.js"></script>
 </body>
+
 </html>

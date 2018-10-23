@@ -1,3 +1,3 @@
 'use strict'
 
-gFontSize = '20px';
+var gFontSize = '20px';
