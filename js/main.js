@@ -1,8 +1,14 @@
 'use strict'
+
 //controller for eventhandlers and comm with the DOM
 
 var gCanvas;
 var gCtx;
+var gCurrMemeData = {
+    txt: '',
+    textcolor: 'black',
+    textsize: 50,
+};
 
 
 
@@ -15,12 +21,9 @@ function init() {
     drawImage();
 }
 
-function onChangedText (text) {
-
-}
-
-function setColor (color) {
-    gCtx.strokeStyle = color
+function setColor(color) {
+    gCtx.strokeStyle = color;
+    gCurrMemeData.textcolor = color;
 }
 
 function onSaveImage() {
@@ -41,3 +44,14 @@ function saveCanvas(elLink) {
     elLink.download = 'my-canvas.jpg'
 }
 
+function onChangedText(txt) {
+    gCtx.fillStyle = gCurrMemeData.textcolor
+    var textProperties = gCurrMemeData.textsize + 'px Roboto'
+    gCtx.font = textProperties
+    gCtx.fillText(txt, 70, 80)
+}
+
+function changeFontSize(sign) {
+    if (sign === 'minus') { gCurrMemeData.textsize+= -4 }
+    else if (sign === 'plus') { gCurrMemeData.textsize+= 4 }
+}
