@@ -18,7 +18,8 @@ function init() {
     gCtx.fillStyle = 'lightgray';
     gCtx.strokeStyle = 'black';
     gCtx.fillRect(0, 0, gCanvas.width, gCanvas.height);
-    drawImage();
+    // drawImage();
+    renderImages();
 }
 
 function setColor(color) {

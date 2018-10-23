@@ -3,6 +3,11 @@ body {
     background-color: rgb(211, 237, 238);
 }
 
+ul {
+    list-style: none;
+    display: flex;
+}
+
 .main-container {
     padding: 20px;
     margin: auto;
@@ -17,9 +22,10 @@ body {
 }
 
 .img {
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 140px;
     cursor: pointer;
+    margin: 10px;
 }
 .properties {
     background-color: #fff;
