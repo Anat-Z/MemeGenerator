@@ -4,9 +4,11 @@
 
 var gCanvas;
 var gCtx;
-var gCurrMemeData = {txt: '',
-textcolor: 'black',
-textsize: 20,};
+var gCurrMemeData = {
+    txt: '',
+    textcolor: 'black',
+    textsize: 50,
+};
 
 
 
@@ -19,8 +21,9 @@ function init() {
     drawImage();
 }
 
-function setColor (color) {
-    gCtx.strokeStyle = color
+function setColor(color) {
+    gCtx.strokeStyle = color;
+    gCurrMemeData.textcolor = color;
 }
 
 function onSaveImage() {
@@ -42,12 +45,13 @@ function saveCanvas(elLink) {
 }
 
 function onChangedText(txt) {
-    gCtx.fillStyle = 'black'
-    gCtx.font = '50px Arial'
-    gCtx.fillText(txt, 100, 100)
+    gCtx.fillStyle = gCurrMemeData.textcolor
+    var textProperties = gCurrMemeData.textsize + 'px Roboto'
+    gCtx.font = textProperties
+    gCtx.fillText(txt, 70, 80)
 }
 
-function changeFontSize (sign) {
-    if (sign === 'minus') {gCurrMemeData.textsize--}
-    else if (sign ==='plus') {gCurrMemeData.textsize++}
+function changeFontSize(sign) {
+    if (sign === 'minus') { gCurrMemeData.textsize+= -4 }
+    else if (sign === 'plus') { gCurrMemeData.textsize+= 4 }
 }

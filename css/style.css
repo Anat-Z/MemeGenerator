@@ -1,4 +1,13 @@
 
+body {
+    background-color: rgb(211, 237, 238);
+}
+
+.main-container {
+    padding: 20px;
+    margin: auto;
+}
+
 .search-bar {
     width: 240px;
 }
@@ -6,3 +15,46 @@
     text-shadow: 2px 2px gray;
 
 }
+
+.properties {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 15px;
+    width: fit-content;
+    margin: 10px;
+    transition: all .8s;
+}
+
+.properties a {
+    color: inherit;
+}
+
+.properties input {
+}
+
+.properties button, .properties input {
+    margin-bottom: 10px;
+}
+
+
+.properties button:hover, .properties input:hover {
+background-color: rgb(212, 247, 212);
+}
+
+.canvas {
+    max-width: 100%;
+    border: 8px solid white;
+    border-radius: 2px;
+}
+
+@font-face {
+    font-family: Roboto;
+    src:url(../lib/Roboto/Roboto-Regular.ttf)
+}
+
+footer {
+    background-color:rgb(226, 221, 221);
+    width: 85%;
+    margin: auto;
+}
+
