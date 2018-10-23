@@ -1,7 +1,6 @@
 'use strict'
 
-
-function drawImage() {
+function drawImage() {  
     var img = new Image()
     img.src = 'img/meme1.jpg'
     img.onload = function() {

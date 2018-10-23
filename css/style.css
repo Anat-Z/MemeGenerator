@@ -6,3 +6,9 @@
     text-shadow: 2px 2px gray;
 
 }
+
+.img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
