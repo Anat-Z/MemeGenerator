@@ -12,6 +12,7 @@ function init() {
     gCtx.fillStyle = 'lightgray';
     gCtx.strokeStyle = 'black';
     gCtx.fillRect(0, 0, gCanvas.width, gCanvas.height);
+    drawImage();
 }
 
 function onChangedText (text) {
@@ -39,3 +40,4 @@ function saveCanvas(elLink) {
     elLink.href = canvas.toDataURL()
     elLink.download = 'my-canvas.jpg'
 }
+
