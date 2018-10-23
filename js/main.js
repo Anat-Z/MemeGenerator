@@ -4,6 +4,9 @@
 
 var gCanvas;
 var gCtx;
+var gCurrMemeData = {txt: '',
+textcolor: 'black',
+textsize: 20,};
 
 
 
@@ -13,6 +16,7 @@ function init() {
     gCtx.fillStyle = 'lightgray';
     gCtx.strokeStyle = 'black';
     gCtx.fillRect(0, 0, gCanvas.width, gCanvas.height);
+    drawImage();
 }
 
 function setColor (color) {
@@ -38,13 +42,12 @@ function saveCanvas(elLink) {
 }
 
 function onChangedText(txt) {
-    ctx.fillStyle = 'black'
-    ctx.font = '50px Arial'
-    ctx.fillText(txt, 100, 100)
+    gCtx.fillStyle = 'black'
+    gCtx.font = '50px Arial'
+    gCtx.fillText(txt, 100, 100)
 }
 
 function changeFontSize (sign) {
-    if (sign === 'minus') {gFontSize--}
-    else if (sign ==='plus') {gFontSize++}
-    console.log (gFontSize)
+    if (sign === 'minus') {gCurrMemeData.textsize--}
+    else if (sign ==='plus') {gCurrMemeData.textsize++}
 }
