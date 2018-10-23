@@ -10,6 +10,7 @@
 </head>
 
 <body onload="init()">
+    <input type="text" class="search-bar" placeholder="Enter text to search our memes">
 
     <section class="images-library">
         <!-- <img src="" alt="memeimage">    to render from js -->
@@ -21,10 +22,11 @@
         <button class="increase-font">+ </button>
         <input type="color" id="color" onchange="setColor(this.value)" />
         <button> <a onclick="saveCanvas(this)">Save</a></button>
+        <button class="shadow-text" onclick="onClickShadow()">S</button>
 
     </div>
 
-    <canvas class="canvas" id="canvas" width="600" height="550"></canvas>
+    <canvas class="canvas" id="canvas" width="500" height="400"></canvas>
 
     <script src="js/main.js"></script>
     <script src="js/util.js"></script>
