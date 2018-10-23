@@ -7,8 +7,19 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Incredible Meme Generator</title>
 </head>
-<body>
+<body onload="init()">
+
+    <section class="images-library">
+    <!-- <img src="" alt="memeimage">    to render from js -->
+    </section>
     
+    <div class="properties"> 
+        <input type="text" id="memetext">
+        <button class="decrease-font">-</button>
+         <button class="increase-font">+ </button>
+
+
+         </div>
 
     <canvas class="canvas" id="canvas" width="600" height="550" onmousemove="canvasClicked(event)"></canvas> 
 
