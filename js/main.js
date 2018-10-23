@@ -1,5 +1,5 @@
 'use strict'
-
+//controller for eventhandlers and comm with the DOM
 
 var gCanvas;
 var gCtx;
