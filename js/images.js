@@ -8,3 +8,5 @@ function drawImage() {
         gCtx.drawImage(img, 0, 0 ,canvas.width, canvas.height)
     }
 }
+
+
