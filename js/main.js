@@ -19,8 +19,31 @@ function init() {
     gCtx.strokeStyle = 'black';
     gCtx.fillRect(0, 0, gCanvas.width, gCanvas.height);
     // drawImage();
+    createImages('img/2.jpg', 'Trump');
+    createImages('img/3.jpg', 'Cute dogs')
     renderImages();
 }
+
+
+function renderImages() {
+
+    var strHtml = `<ul>`
+
+    gImages.forEach(function (img) {
+        strHtml += `   
+    <li> <img class="img" src="${img.src}" 
+    onclick="onclickImg(this, '${img.id}')"></li>
+     ` ;
+    })
+
+    strHtml += ` 
+</ul>`
+
+    var elImages = document.querySelector('.images-cards')
+    elImages.innerHTML = strHtml;
+}
+
+
 
 function setColor(color) {
     gCtx.strokeStyle = color;
@@ -53,6 +76,6 @@ function onChangedText(txt) {
 }
 
 function changeFontSize(sign) {
-    if (sign === 'minus') { gCurrMemeData.textsize+= -4 }
-    else if (sign === 'plus') { gCurrMemeData.textsize+= 4 }
+    if (sign === 'minus') { gCurrMemeData.textsize += -4 }
+    else if (sign === 'plus') { gCurrMemeData.textsize += 4 }
 }

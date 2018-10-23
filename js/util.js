@@ -4,22 +4,14 @@
 
 var gFontSize = '20px';
 
+function makeId() {
+    var length = 6;
+    var txt = '';
+    var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
-function renderImages() {
+    for (var i = 0; i < length; i++) {
+        txt += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
 
-    var strHtml = `<ul>`
-
-    gImages.forEach(function (img) {
-        strHtml += `   
-    <li> <img class="img" src="${img.src}" onclick="onclickImg(this, ${img.id})"></li>
-    
-     ` ;
-    })
-
-    strHtml += ` 
-</ul>`
-
-    var elImages = document.querySelector('.images-cards')
-    elImages.innerHTML = strHtml;
+    return txt;
 }
-
