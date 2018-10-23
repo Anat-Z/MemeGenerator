@@ -1,4 +1,5 @@
 'use strict'
+
 //controller for eventhandlers and comm with the DOM
 
 var gCanvas;
@@ -12,11 +13,6 @@ function init() {
     gCtx.fillStyle = 'lightgray';
     gCtx.strokeStyle = 'black';
     gCtx.fillRect(0, 0, gCanvas.width, gCanvas.height);
-    drawImage();
-}
-
-function onChangedText (text) {
-
 }
 
 function setColor (color) {
@@ -41,3 +37,14 @@ function saveCanvas(elLink) {
     elLink.download = 'my-canvas.jpg'
 }
 
+function onChangedText(txt) {
+    ctx.fillStyle = 'black'
+    ctx.font = '50px Arial'
+    ctx.fillText(txt, 100, 100)
+}
+
+function changeFontSize (sign) {
+    if (sign === 'minus') {gFontSize--}
+    else if (sign ==='plus') {gFontSize++}
+    console.log (gFontSize)
+}

@@ -18,8 +18,8 @@
 
     <div class="properties">
         <input type="text" id="memetext" onchange="onChangedText(this.value)">
-        <button class="decrease-font">-</button>
-        <button class="increase-font">+ </button>
+        <button class="decrease-font" onclick="changeFontSize('minus')">-</button>
+        <button class="increase-font" onclick="changeFontSize('plus')">+ </button>
         <input type="color" id="color" onchange="setColor(this.value)" />
         <button> <a onclick="saveCanvas(this)">Save</a></button>
         <button class="shadow-text" onclick="onClickShadow()">S</button>
