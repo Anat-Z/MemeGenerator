@@ -31,7 +31,7 @@ function getImgidxById(imgId) {
 };
 
 function onclickImg(img) {
-    console.log(img)
+    gCurrMemeData.elImage = img;
     var canvas = document.getElementById("canvas");
     gCtx = canvas.getContext("2d");
     gCtx.drawImage(img, 0, 0, canvas.width, canvas.height)

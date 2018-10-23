@@ -8,6 +8,7 @@ var gCurrMemeData = {
     txt: '',
     textcolor: 'black',
     textsize: 50,
+    elImage: '',
 };
 
 
@@ -48,10 +49,15 @@ function renderImages() {
 function setColor(color) {
     gCtx.strokeStyle = color;
     gCurrMemeData.textcolor = color;
+    updateCanvas();
 }
 
-function onSaveImage() {
-
+function updateCanvas () {
+    gCtx.drawImage(gCurrMemeData.elImage, 0, 0, canvas.width, canvas.height)
+    gCtx.fillStyle = gCurrMemeData.textcolor
+    var textProperties = gCurrMemeData.textsize + 'px Roboto'
+    gCtx.font = textProperties
+    gCtx.fillText(gCurrMemeData.txt, 50, 40)
 }
 
 function clearCanvas() {
@@ -64,18 +70,19 @@ function clearCanvas() {
 }
 
 function saveCanvas(elLink) {
+    console.log(elLink)
     elLink.href = canvas.toDataURL()
     elLink.download = 'my-canvas.jpg'
 }
 
 function onChangedText(txt) {
-    gCtx.fillStyle = gCurrMemeData.textcolor
-    var textProperties = gCurrMemeData.textsize + 'px Roboto'
-    gCtx.font = textProperties
-    gCtx.fillText(txt, 70, 80)
+    gCurrMemeData.txt = txt
+   updateCanvas()
 }
 
 function changeFontSize(sign) {
     if (sign === 'minus') { gCurrMemeData.textsize += -4 }
     else if (sign === 'plus') { gCurrMemeData.textsize += 4 }
+    updateCanvas();
 }
+
