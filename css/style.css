@@ -8,6 +8,7 @@ ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 100px;
 }
 
 .main-container {
@@ -29,6 +30,7 @@ ul {
     cursor: pointer;
     clip-path: hexagon(40%);
     margin: 10px;
+    
 }
 
 .properties {

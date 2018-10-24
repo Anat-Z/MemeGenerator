@@ -4,11 +4,12 @@
 
 var gCanvas;
 var gCtx;
-var gCurrMemeData = {
-    txt: '',
-    textcolor: 'black',
+var gCurrMemeData ={
+    txt1: '',
+    txt2: '',
+    textcolor: 'white',
     textsize: 50,
-    elImage: '',
+    elImage: ''
 };
 
 
@@ -79,7 +80,9 @@ function updateCanvas () {
     gCtx.fillStyle = gCurrMemeData.textcolor
     var textProperties = gCurrMemeData.textsize + 'px Roboto'
     gCtx.font = textProperties
-    gCtx.fillText(gCurrMemeData.txt, 50, 40)
+    gCtx.fillText(gCurrMemeData.txt1, 50, 40)
+    gCtx.fillText(gCurrMemeData.txt2, 50, 370)
+    
 }
 
 function clearCanvas() {
@@ -98,12 +101,12 @@ function saveCanvas(elLink) {
 }
 
 function firstMemeText(txt) {
-    gCurrMemeData.txt = txt
+    gCurrMemeData.txt1 = txt
    updateCanvas()
 }
 
 function secondMemeText(txt) {
-    gCurrMemeData.txt = txt
+    gCurrMemeData.txt2 = txt
     updateCanvas()
 }
 
