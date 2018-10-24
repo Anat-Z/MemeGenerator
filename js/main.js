@@ -21,7 +21,7 @@ function init() {
     gCtx.strokeStyle = 'white';
     gCtx.fillRect(0, 0, gCanvas.width, gCanvas.height);
     // drawImage();
-    createImg('img/2.jpg', 'Trump')
+    createImg('img/1.jpg', 'Dancing with no fucks given')
     createImg('img/3.jpg', 'Cute dogs')
     createImg('img/4.jpg', 'Baby and dog sleeping')
     createImg('img/5.jpg', 'punch baby')
@@ -116,3 +116,20 @@ function changeFontSize(sign) {
     updateCanvas();
 }
 
+function searchImagesByDesc (txt) {
+    var suitableImages = filterImages(txt);
+    console.log (suitableImages);
+}
+
+function onTextShadowToggle() {
+    if (!gCurrMemeData.shadowOn) {
+        gCurrMemeData.shadowOn = true;
+        makeShadow();
+        updateCanvas();
+    }
+    else {
+    gCurrMemeData.shadowOn = false;
+        cancelShadow();
+        updateCanvas();
+    }
+}

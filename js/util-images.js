@@ -34,9 +34,14 @@ function onclickImg(img) {
 
 function drawImage() {
     var img = new Image()
-    img.src = 'img/meme1.jpg'
+    img.src = 'img/1.jpg'
     img.onload = function () {
         gCtx.drawImage(img, 0, 0, canvas.width, canvas.height)
     }
 }
 
+function filterImages(txt) {
+    return gImages.filter(function (img) {
+        return txt === img.desc
+    });
+}
