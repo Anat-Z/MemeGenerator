@@ -1,14 +1,8 @@
 'use strict'
 
-var gImages = [
-    {
-        id: 1,
-        src: 'img/1.jpg',
-        desc: 'Look at all the fucks I give'
-    }
-];
+var gImages = [];
 
-function createImages (src, desc) {
+function createImg (src, desc) {
    var imageObj =  createImageObj (src,desc );
    gImages.push(imageObj);
 }

@@ -11,7 +11,11 @@
 </head>
 
 <body onload="init()">
-    
+    <section class="header-page">
+        <div class="container flex align-center space-between header-height">
+            <div class="logo">Meme <br> Generator </div>
+        </div>
+    </section>    
    
 
     <input type="text" class="search-bar" placeholder="Enter text to search our memes">
@@ -23,7 +27,8 @@
     </section>
 
     <div class="properties flex">
-        <input type="text" id="memetext" onchange="onChangedText(this.value)" placeholder="Text for your meme">
+        <input type="text" id="memetext1" oninput="firstMemeText(this.value)" placeholder="First text for your meme">
+        <input type="text" id="memetext2" oninput="secondMemeText(this.value)" placeholder="Second text for your meme">
         <button class="decrease-font btn btn-light" onclick="changeFontSize('minus')">-</button>
         <button class="increase-font btn btn-light" onclick="changeFontSize('plus')">+ </button>
         <input type="color" id="color" onchange="setColor(this.value)" />
